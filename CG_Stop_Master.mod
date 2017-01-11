@@ -1,7 +1,8 @@
 /*********************************************
  * OPL 12.3 Model
  * Author: RCS-Liao
- * Creation Date: 2016-7-15 at обнГ05:56:11
+ * Creation Date: 2016-7-15 at PM05:56:11
+ * This model file is the model of the main train stopping problem for column generation 
  *********************************************/
 
 {int} StationSet = ...;
@@ -24,7 +25,7 @@ tuple Train
   int Service[ODSet]; 
   }
 
-{Train} TrainSet = ...;
+{Train} TrainSet = ...;/*The train set is to be add by the slave problem. When initial, we provide an initial solution.*/
 
 dvar float+ n[TrainSet];
 
